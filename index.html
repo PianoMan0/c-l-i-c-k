@@ -204,7 +204,7 @@
 
     <div id="flash-warning" class="flash-warning-banner">
   <div class="warning-content">
-    <p><strong>WARNING:</strong> This site may contain flashing lights. If you have photosensitive epilepsy or sensitivity to flashing visual stimuli, please consult a doctor before viewing this content.</p>
+    <p><strong>WARNING:</strong> This site may contain flashing lights. If you have photosensitive epilepsy or sensitivity to flashing visual stimuli, please do not view this website.</p>
     <button id="acknowledge-btn" aria-label="I acknowledge the flashing light warning">I understand</button>
   </div>
 </div>
@@ -369,7 +369,6 @@
             shadow.style.height = (20 + level * 15) + 'px';
             document.body.appendChild(shadow);
 
-            // Move it around
             let x = parseInt(shadow.style.left);
             let y = parseInt(shadow.style.top);
             setInterval(() => {
@@ -468,7 +467,6 @@
                 localStorage.setItem('flash-warning-dismissed', 'true');
             });
             
-            // Check if user previously dismissed
             if (localStorage.getItem('flash-warning-dismissed') === 'true') {
                 banner.style.display = 'none';
             }
